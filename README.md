@@ -56,11 +56,11 @@ In command line, run:
 
 ## Sample Output: 
 
-K-Means Plot with K=4 clusters: 
+#### K-Means Plot with K=4 clusters: 
 
 ![alt text](img/sample_output.png)
 
-Elbow Plot with K=4 clusters: 
+#### Elbow Plot with K=4 clusters: 
 
 ![alt text](img/sample_elbow.png)
 
