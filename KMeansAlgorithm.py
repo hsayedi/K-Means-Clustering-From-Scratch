@@ -99,7 +99,7 @@ class KMeansAlgorithm(object):
 
         Returns
         -------
-        TYPE
+        numpy.ndarray
             Centroids will be a (n x K) dimensional matrix.
             Each column will be one centroid for one cluster.
 
@@ -238,68 +238,19 @@ class KMeansAlgorithm(object):
         return plt.show(block=True)
         
 
-
-df_kmeans = generate_data('AB_NYC_2019.csv')
-
-kmeans = KMeansAlgorithm(df_kmeans, 4)
-kmeans.fit_model(10)
-kmeans.plot_kmeans()
-results, centroids = kmeans.predict()
-kmeans.plot_elbow()
-
-
-'''
-        Parameters
-        ----------
-        self.data : numpy.ndarray
-            DataFrame of 2 features converted into a numpy array.
-        num_iter : int
-            number of iterations until convergence.
-        self.K : int
-            number of clusters.
-
-        Returns
-        -------
-
-'''    
-
-
-
-# kmeans=Kmeans(X,K)
-# kmeans.fit(n_iter)
-# Output,Centroids=kmeans.predict()
+def main():
+    
+    df_kmeans = generate_data('AB_NYC_2019.csv')
+    kmeans = KMeansAlgorithm(df_kmeans, 4)
+    kmeans.fit_model(10)
+    kmeans.plot_kmeans()
+    results, centroids = kmeans.predict()
+    kmeans.plot_elbow()
+    
+if __name__ == '__main__':
+  main()
 
 
 
 
-# class FileParser(object):
-#   def __init__(self, filename):
-#     self.tokenList = open(filename, 'r')
-
-#   def cleaned_input(self):
-#     cleanedInput = []
-#     prevLine = 0
-
-#     for line in self.tokenList:
-#         if line.startswith('LINE:'):
-#             lineNo = int(token_of(line))
-#             diff = lineNo - prevLine - 1
-#             cleanedInput.append('\n' * (diff if diff>1 else diff+1))
-#             prevLine = lineNo
-#         else:
-#             cleanedLine = token_of(line)
-#             cleanedInput.append(cleanedLine + ' ')
-
-#     return cleanedInput
-# Your main script then becomes just:
-
-# import sys
-# import foobar
-
-# def main():
-#     thefile = foobar.FileParser(sys.argv[1])
-#     print thefile.cleaned_input()
-
-# if __name__ == '__main__':
-#   main()
 
