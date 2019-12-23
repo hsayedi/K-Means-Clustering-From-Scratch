@@ -31,7 +31,8 @@ Initialize cluster centroids: \
 a. Pick k points at random and set as centroids represented each cluster \
 Repeat while cluster assignments don't change \
 b. Assign each point to nearest centroid b. Given new assignments, compute new cluster centroids as mean of all possible \
-points in cluster \
+points in cluster 
+
 1) What neighborhoods are the most expensive? \
 2) What room_types are most desirable? \
 3) Cluster listing based on room_type / price / num_reviews (popularity)
@@ -56,9 +57,11 @@ In command line, run:
 ## Sample Output: 
 
 K-Means Plot with K=4 clusters: 
+
 ![alt text](img/sample_output.png)
 
 Elbow Plot with K=4 clusters: 
+
 ![alt text](img/sample_elbow.png)
 
 
