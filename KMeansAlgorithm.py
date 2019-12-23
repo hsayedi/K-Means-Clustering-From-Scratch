@@ -9,6 +9,7 @@ Object-Oriented Programming Code
 Implemneting K-Means Clustering from Scratch
 
 """
+import sys
 import numpy as np
 import pandas as pd
 import random as rd
@@ -105,7 +106,7 @@ class KMeansAlgorithm(object):
 
         """
         temp_centroids = np.array([]).reshape(self.n, 0)
-        for i in range(K):
+        for i in range(self.K):
             rand = rd.randint(0, self.m-1)
             temp_centroids = np.c_[temp_centroids, self.data[rand]]
             
@@ -241,14 +242,23 @@ class KMeansAlgorithm(object):
 def main():
     
     df_kmeans = generate_data('AB_NYC_2019.csv')
-    kmeans = KMeansAlgorithm(df_kmeans, 4)
-    kmeans.fit_model(10)
+    kmeans = KMeansAlgorithm(df_kmeans, K_clusters)
+    kmeans.fit_model(num_iterations)
     kmeans.plot_kmeans()
     results, centroids = kmeans.predict()
     kmeans.plot_elbow()
     
+    
 if __name__ == '__main__':
-  main()
+    # Read in command line args
+    try:
+        K_clusters = int(sys.argv[1])
+        num_iterations = int(sys.argv[2])
+        main()
+    except IndexError:
+        raise IndexError('example/ python KMeansAlgorithm.py [K_value: [int], number of iterations: [int]]')
+    
+  
 
 
 
