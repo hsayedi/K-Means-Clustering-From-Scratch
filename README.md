@@ -33,8 +33,8 @@ Repeat while cluster assignments don't change \
 b. Assign each point to nearest centroid b. Given new assignments, compute new cluster centroids as mean of all possible \
 points in cluster 
 
-1) What neighborhoods are the most expensive? \
-2) What room_types are most desirable? \
+1) What neighborhoods are the most expensive? 
+2) What room_types are most desirable? 
 3) Cluster listing based on room_type / price / num_reviews (popularity)
 
 ## Getting Started
