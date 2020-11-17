@@ -56,7 +56,7 @@ In command line, run:
 
 ## Sample Output:
 
-#### K-Means Plot with K=4 clusters:
+#### K-Means Plot with K=2-8 clusters:
 
 ![alt text](img/sample_output.png)
 
