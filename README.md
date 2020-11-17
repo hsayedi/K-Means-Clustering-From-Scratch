@@ -62,4 +62,4 @@ In command line, run:
 
 #### Elbow Plot with K=4 clusters:
 
-![alt text](img/wcss.png)
+![alt text](img/elbow_method.png)
